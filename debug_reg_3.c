@@ -25,7 +25,7 @@
 
 #define __SYSENTER_ENABLE__
 
-#include "hooks.h"
+#include "sebek-lin26-3.2.0b/hooks.h"
 
 /* define this if you want (very) verbose kern logs */
 #define __DEBUG__
@@ -67,8 +67,6 @@
 unsigned int h0x01_global    = 0;	
 
 void (*__orig_do_debug)(struct pt_regs * regs, unsigned long error_code);
-//extern void *text_poke(void *addr, const void *opcode, size_t len);
-//void *__kprobes text_poke(void *addr, const void *opcode, size_t len);
 
 /*
  *     So that we can set our main watch on all cpu's
